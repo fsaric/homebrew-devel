@@ -1,6 +1,6 @@
 class Python27 < Formula
-  desc ""
-  homepage ""
+  desc "Interpreted, interactive, object-oriented programming language"
+  homepage "https://www.python.org/"
   url "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz"
   sha256 "b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43"
 
@@ -11,7 +11,7 @@ class Python27 < Formula
   depends_on "sqlite"
 
   def install
-    args = %W[
+    args = %w[
       --enable-ipv6
       --with-ensurepip
     ]
@@ -52,8 +52,7 @@ class Python27 < Formula
       args << "CPPFLAGS=#{cppflags.join(" ")}" unless cppflags.empty?
     end
     system "./configure", *std_configure_args, *args
-    system "make"
-    system "make install"
+    system "make", "install"
 
     rm bin/"2to3"
   end
