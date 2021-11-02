@@ -10,6 +10,13 @@ class Python27 < Formula
   depends_on "readline"
   depends_on "sqlite"
 
+  uses_from_macos "bzip2"
+  uses_from_macos "expat"
+  uses_from_macos "libffi"
+  uses_from_macos "ncurses"
+  uses_from_macos "unzip"
+  uses_from_macos "zlib"
+
   def install
     args = %w[
       --enable-ipv6
