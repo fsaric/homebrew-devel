@@ -4,6 +4,12 @@ class Python27 < Formula
   url "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz"
   sha256 "b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43"
 
+  bottle do
+    root_url "https://github.com/fsaric/homebrew-devel/releases/download/python27-2.7.18"
+    sha256 catalina:     "c8e9440fba59a14621b9c956577ca756898bc8d355401af2d589ea9189d6f4a8"
+    sha256 x86_64_linux: "091966d059d24a6775311d47bcbb2de7508931fd9384b304036f9a2841f993df"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "gdbm"
   depends_on "openssl@1.1"
